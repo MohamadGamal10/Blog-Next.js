@@ -4,11 +4,10 @@ import { getPosts } from "@/lib/post";
 import { Metadata } from "next";
 import React from "react";
 import { getCategories } from "@/lib/category";
-import { postsPerPage, revalidateTime } from "@/lib/utils";
+import { postsPerPage } from "@/lib/utils";
 import CategoriesFilter from "./_components/categories-filter";
 import QueryPagination from "./_components/query-pagination";
 
-export const revalidate = revalidateTime;
 
 export const metadata: Metadata = {
   title: "مقالات مدونتي: اكتشف مواضيع متنوعة ومفيدة",

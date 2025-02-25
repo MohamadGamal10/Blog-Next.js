@@ -7,13 +7,11 @@ import AuthorSection from "@/components/author-section";
 import { PortableText } from "@portabletext/react";
 import SectionTitle from "@/components/section-title";
 import { notFound } from "next/navigation";
-import { revalidateTime } from "@/lib/utils";
 import { urlForImage } from "@/sanity/lib/image";
 import BackButton from "../_components/back-button";
 import { richTextComponents } from "@/components/rich-text-components";
 import RelatedPost from "../_components/related-post";
 
-export const revalidate = revalidateTime;
 
 export async function generateMetadata({params}: {params: { slug: string }}) {
   // fetch data
