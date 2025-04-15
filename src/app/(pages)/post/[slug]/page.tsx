@@ -12,10 +12,11 @@ import BackButton from "../_components/back-button";
 import { richTextComponents } from "@/components/rich-text-components";
 import RelatedPost from "../_components/related-post";
 
-
-export async function generateMetadata({params}: {params: { slug: string }}) {
+type Params = Promise<{ slug: string }>
+export async function generateMetadata({params}: { params: Params }) {
+  const { slug } = await params
   // fetch data
-  const { post } = await getPost(params.slug);
+  const { post } = await getPost(slug);
 
   if (!post) {
     return {

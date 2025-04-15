@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const richTextComponents = {
   types: {
-    image: ({ value }: any) => (
+    image: ({ value }: {}) => (
       <Image
         src={urlForImage(value)}
         alt="post image"
